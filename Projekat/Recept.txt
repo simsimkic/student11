@@ -1,0 +1,1 @@
+[{"Sifra":1,"Lekar":"Petar","JmbgPacijenta":"9988776655443","Datum":"2020-08-25T13:01:12.7472999+02:00","Lekovi":{"Lek":4}},{"Sifra":2,"Lekar":"Petar","JmbgPacijenta":"0099887766554","Datum":"2020-08-25T13:25:12.3449541+02:00","Lekovi":{"Lek":5}}]

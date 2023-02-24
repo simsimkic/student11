@@ -1,0 +1,1 @@
+[{"Sifra":1,"Apotekar":"Nemanja","Datum":"2020-08-25T13:02:17.9873119+02:00","Lekovi":{"Lek":4},"UkupnaCena":800.0},{"Sifra":2,"Apotekar":"Janko","Datum":"2020-08-26T11:57:53.0852216+02:00","Lekovi":{"Loperamid":2,"Lek":5},"UkupnaCena":1400.0}]

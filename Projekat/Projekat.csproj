@@ -1,0 +1,94 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EC05D49-DC17-4CB5-9553-71BFBD4061F7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Projekat</RootNamespace>
+    <AssemblyName>Projekat</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Projekat.cs" />
+    <Compile Include="Repository\KorisnikRepository.cs" />
+    <Compile Include="Repository\LekRepository.cs" />
+    <Compile Include="Repository\ReceptRepository.cs" />
+    <Compile Include="Repository\RacunRepository.cs" />
+    <Compile Include="Exceptions\DrugForRecipeException.cs" />
+    <Compile Include="Exceptions\InvalidDrugIdException.cs" />
+    <Compile Include="Exceptions\InvalidPasswordException.cs" />
+    <Compile Include="Exceptions\InvalidRecipeDrugException.cs" />
+    <Compile Include="Exceptions\InvalidUsernameException.cs" />
+    <Compile Include="Service\LekService.cs" />
+    <Compile Include="Exceptions\NoDrugByPasswordException.cs" />
+    <Compile Include="Exceptions\NoDrugsAvailableException.cs" />
+    <Compile Include="Exceptions\NoDrugsByNameException.cs" />
+    <Compile Include="Exceptions\NoDrugsByPriceException.cs" />
+    <Compile Include="Exceptions\NoRecipeByDoctorNameException.cs" />
+    <Compile Include="Exceptions\NoRecipeByDrugNameException.cs" />
+    <Compile Include="Exceptions\NoRecipeByPasswordException.cs" />
+    <Compile Include="Exceptions\NoRecipeByPersonalNumberException.cs" />
+    <Compile Include="Exceptions\NoRecipesAvailableException.cs" />
+    <Compile Include="Exceptions\NotRegisteredUserException.cs" />
+    <Compile Include="Exceptions\NoUserByNameException.cs" />
+    <Compile Include="Service\ReceptService.cs" />
+    <Compile Include="Service\KorisnikService.cs" />
+    <Compile Include="Service\RacunService.cs" />
+    <Compile Include="Controller\KorisnikController.cs" />
+    <Compile Include="Controller\LekController.cs" />
+    <Compile Include="Controller\ReceptController.cs" />
+    <Compile Include="Controller\RacunController.cs" />
+    <Compile Include="Model\TipKorisnika.cs" />
+    <Compile Include="Model\Korisnik.cs" />
+    <Compile Include="Model\Lek.cs" />
+    <Compile Include="Model\Recept.cs" />
+    <Compile Include="Model\Racun.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
